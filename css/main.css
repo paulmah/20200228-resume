@@ -1,0 +1,277 @@
+* {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh; /* auto */
+    grid-template-areas:
+    "title"
+    "profile"
+    "obj"
+    "pic"
+    "stub1"
+    "experience"
+    "education"
+    "skills"
+    "contacts";
+}
+.title { grid-area: title; }
+.profile { grid-area: profile; }
+.obj { grid-area: obj; }
+.pic { grid-area: pic; }
+.stub1 { grid-area: stub1; }
+.experience { grid-area: experience; }
+.education { grid-area: education; }
+.skills { grid-area: skills; }
+.contacts { grid-area: contacts; }
+
+.title, .events, .footer { background: lightsalmon; }
+.login { background: red; }
+.navigation, .conten, .promotions { background: lightsteelblue; }
+.welcome, .footer { background: lightyellow; }
+.sidebar {background: cyan; }
+.conten { background: lightgreen; }
+
+/* tablet */
+ @media screen and ( min-width: 500px ){
+
+body {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50vh 50vh 50vh 50vh 50vh 50vh 50vh 50vh 50vh;
+    grid-template-areas:
+    "title title"
+    "top-nav top-nav"
+    "profile profile"
+    ". ."
+    ". ."
+    "experience experience"
+    "education education"
+    "skills skills"
+    "contacts contacts";
+
+} 
+.title { grid-area: title; }
+.top-nav { grid-area: top-nav; }
+.profile { grid-area: profile; }
+.obj { grid-area: obj; }
+.pic { grid-area: pic; }
+.stub1 { grid-area: stub1; }
+.experience { grid-area: experience; }
+.education { grid-area: education; }
+.skills { grid-area: skills; }
+.contacts { grid-area: contacts; }
+
+}
+ @media screen and ( min-width: 1024px ){
+body {
+    grid-template-columns: 
+    calc ( 100% / 3 )
+    calc ( 100% / 3 )
+    calc ( 100% / 3 );
+    grid-template-rows: 12vh 12vh 12vh 12vh 12vh 12vh 12vh 12vh; /* auto */
+    grid-template-areas:
+    "title title title"
+    "top-nav top-nav top-nav"
+    "profile profile profile"
+    ". . ."
+    "experience experience experience"
+    "education education education"
+    "skills skills skills"
+    "contacts contacts contacts"    
+}
+}
+
+
+
+
+h1 {
+    font-family: 'Times New Roman', Georgia, serif;
+    text-align: center;
+}
+h2 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+nav {
+    width: auto;
+    max-width: 600px;
+    background-color: rgb(00,00,255);
+    color: #ff00ff;
+    margin: 16px auto;
+}
+nav ul {
+    text-align: center;
+    padding: 0;
+}
+nav ul li {
+    display: inline-block; /* can be inline, block or inlineblock*/
+}
+nav ul li a {
+    text-decoration: none; /* will remove underline from this link*/
+    display: inline-block;
+    padding: 8px 26px; /* 16 for top and bottom and 32 for left right */
+    color: #00ff00
+}
+nav ul li a:hover, nav ul li a:focus {
+    background-color: rgb( 0,255,0);
+    color: #ff00ff /* fff implies ffffff */
+}
+nav ul li a:active {
+    background-color: rgb( 255,0,255);
+    color: #00ff00 /* fff implies ffffff */
+}
+nav.topnav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+}
+
+.current-link {
+    background-color: rgb( 255,255,0,0.7);
+    color: #ff00ff /* fff implies ffffff */
+}
+
+#reduce-padding {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 160px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+body {
+    /* background-image: https://unsplash.com/photos/-IQGXSMLYJc 
+    https://www.vecteezy.com/vector-art/153501-blue-grunge-background */
+    background-size: tile; /*tile || cover || */
+    background-repeat: repeat;
+    background-position: top center; /* top right */
+    background-attachment: fixed;
+   /* background-image: url('../img/blue-bg.jpg'); */
+    opacity: 1;
+
+}
+/*
+.background {
+    content: ' ';
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('../img/blue-bg.jpg');
+
+
+}
+*/
+
+
+
+article {
+    max-width: 600px; /* width: 600px; */
+    margin-left: auto; /* Margin left and right will centre a block level element! */
+    margin-right: auto;
+    padding: 0px;  /* adds padding*/
+}
+p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgb( 33,33,33 ); /*f There are a few ways to do colour... */
+    background-color: none; /* short hand with #eee */
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+  }
+
+  .screen-reader-text:focus { /* this ":" means pseudo selectors:
+                                a:hover very common
+                                a:visited ?purple if visited and blue if not
+                                a:active state of element
+                                */
+
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444#;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 15px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+  }
+
+  .hide-me {
+      list-style: none;
+      height: 0;    
+  }
+
+  .overflow-hidden {
+      overflow: hidden;
+      height: 35px;
+  }
+  .overflow-visible {
+    overflow: visible;
+    height: 35px;
+
+  }
+  .overflow-scroll {
+    overflow: scroll;
+    height: 75px;
+  }  
+  .overflow-auto {
+    overflow: auto;
+    height: 75px;
+
+  }
+#social-media-links {
+    list-style: none;
+    text-align: center;
+}
+#social-media-links > li {  /* using '>', only direct child affected (not grandchild). the li must be directly inside the element with the "social-media-links" id in this case */
+    display: inline-block;
+    margin: 8px;
+    font-size: 32px;
+
+}
+#social-media-links .fab {
+    color: rgba( 10, 150, 150, 1);
+    font-size: 64px;
+    height: 8px;
+    width: 8px;
+}
+#social-media-links a:hover .fab,
+#social-media-links a:focus .fab,
+#social-media-links a:active .fab  /* psuedo-selector with nesting. */
+{
+    color: rgba( 255, 0, 0, 0.75 ); /* rgba - the "a" stands for alpha channel.   alpha channel: 1 = opaque; 0 = transparent.  can use values in between like 0.5 */
+/* color: rgba( 50, 50, 50, 0.5 ); /* rgba - the "a" stands for alpha channel.   alpha channel: 1 = opaque; 0 = transparent.  can use values in between like 0.5 */
+}
