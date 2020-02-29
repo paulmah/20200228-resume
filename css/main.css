@@ -8,7 +8,7 @@
 body {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh; /* auto */
+    grid-template-rows: 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh30vh 30vh 30vh 30vh; /* auto */
     grid-template-areas:
     "title"
     "profile"
@@ -21,6 +21,7 @@ body {
     "contacts";
 }
 .title { grid-area: title; }
+.top-nav {grid-area: top-nav;}
 .profile { grid-area: profile; }
 .obj { grid-area: obj; }
 .pic { grid-area: pic; }
@@ -30,31 +31,33 @@ body {
 .skills { grid-area: skills; }
 .contacts { grid-area: contacts; }
 
-.title, .events, .footer { background: lightsalmon; }
-.login { background: red; }
-.navigation, .conten, .promotions { background: lightsteelblue; }
-.welcome, .footer { background: lightyellow; }
-.sidebar {background: cyan; }
-.conten { background: lightgreen; }
+.title, .experience { background: lightsalmon; }
+.profile, .education { background: red; }
+.top-nav, .skills { background: lightsteelblue; }
+.obj, .contacts { background: lightyellow; }
+.pic {background: cyan; }
+.stub1 { background: lightgreen; }
 
 /* tablet */
  @media screen and ( min-width: 500px ){
 
 body {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
     grid-template-rows: 50vh 50vh 50vh 50vh 50vh 50vh 50vh 50vh 50vh;
     grid-template-areas:
-    "title title"
-    "top-nav top-nav"
-    "profile profile"
-    ". ."
-    ". ."
-    "experience experience"
-    "education education"
-    "skills skills"
-    "contacts contacts";
-
-} 
+    grid-template-rows: 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh; /* auto */
+    grid-template-areas:
+    "top-nav"
+    "title"
+    "profile"
+    "obj"
+    "pic"
+    "stub1"
+    "experience"
+    "education"
+    "skills"
+    "contacts";
+}
 .title { grid-area: title; }
 .top-nav { grid-area: top-nav; }
 .profile { grid-area: profile; }
@@ -78,7 +81,7 @@ body {
     "title title title"
     "top-nav top-nav top-nav"
     "profile profile profile"
-    ". . ."
+    "obj pic stub"
     "experience experience experience"
     "education education education"
     "skills skills skills"
@@ -102,21 +105,21 @@ h2 {
 nav {
     width: auto;
     max-width: 600px;
-    background-color: rgb(00,00,255);
+    background-color: rgb(0,0,0);
     color: #ff00ff;
-    margin: 16px auto;
+    margin: 16px 16px; /* 16px auto */
 }
 nav ul {
     text-align: center;
     padding: 0;
 }
 nav ul li {
-    display: inline-block; /* can be inline, block or inlineblock*/
+    display: block; /* can be inline, block or inlineblock*/
 }
 nav ul li a {
     text-decoration: none; /* will remove underline from this link*/
     display: inline-block;
-    padding: 8px 26px; /* 16 for top and bottom and 32 for left right */
+    padding: 26px 26px; /* 16 for top and bottom and 32 for left right */
     color: #00ff00
 }
 nav ul li a:hover, nav ul li a:focus {
