@@ -4,92 +4,98 @@
     margin: 0;
 }
 
+body {
+    background-image: url("../img/paul-bg.jpg");
+    background-size: tile; /*tile || cover || */
+    background-repeat: repeat;
+    background-position: top center; /* top right */
+    background-attachment: fixed;
+   /* background-image: url('../img/blue-bg.jpg'); */
+    opacity: 1;
+
+}
 
 body {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh30vh 30vh 30vh 30vh; /* auto */
+    grid-template-rows: 50% 10% auto auto auto auto auto auto auto;
+
     grid-template-areas:
     "title"
     "profile"
     "obj"
+    "contacts"
     "pic"
-    "stub1"
+    "social-media-links"
     "experience"
     "education"
-    "skills"
-    "contacts";
+    "hobbies"
 }
 .title { grid-area: title; }
-.top-nav {grid-area: top-nav;}
+/* .top-nav {grid-area: top-nav;} */
 .profile { grid-area: profile; }
 .obj { grid-area: obj; }
 .pic { grid-area: pic; }
-.stub1 { grid-area: stub1; }
+.hobbies { grid-area: hobbies; }
 .experience { grid-area: experience; }
 .education { grid-area: education; }
-.skills { grid-area: skills; }
+.social-media-links { grid-area: social-media-links; }
 .contacts { grid-area: contacts; }
 
-.title, .experience { background: lightsalmon; }
-.profile, .education { background: red; }
-.top-nav, .skills { background: lightsteelblue; }
+/* .title, .experience { background: lightsalmon; } */
+.profile, .contacts, .pic, .social-media-links, .education { background: rgb(227, 228, 214); }
+.obj, .experience, .hobbies { background: rgb(183, 240, 240); }
+/* .top-nav, .skills { background: lightsteelblue; }
 .obj, .contacts { background: lightyellow; }
-.pic {background: cyan; }
-.stub1 { background: lightgreen; }
+.education .pic {background: cyan; }
+.hobbies { background: lightgreen; } */
 
 /* tablet */
  @media screen and ( min-width: 500px ){
 
 body {
     grid-template-columns: 100%;
-    grid-template-rows: 50vh 50vh 50vh 50vh 50vh 50vh 50vh 50vh 50vh;
+    grid-template-rows: 50% 10% 5% 8% auto auto auto auto auto;
     grid-template-areas:
-    grid-template-rows: 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh; /* auto */
-    grid-template-areas:
-    "top-nav"
+    /* "top-nav" */
     "title"
     "profile"
     "obj"
+    "contacts"
     "pic"
-    "stub1"
+    "social-media-links"
     "experience"
     "education"
-    "skills"
-    "contacts";
+    "hobbies"
 }
 .title { grid-area: title; }
 .top-nav { grid-area: top-nav; }
 .profile { grid-area: profile; }
 .obj { grid-area: obj; }
 .pic { grid-area: pic; }
-.stub1 { grid-area: stub1; }
+.hobbies { grid-area: hobbies; }
 .experience { grid-area: experience; }
 .education { grid-area: education; }
 .skills { grid-area: skills; }
 .contacts { grid-area: contacts; }
+.social-media-links { grid-area: social-media-links; }
 
 }
  @media screen and ( min-width: 1024px ){
 body {
-    grid-template-columns: 
-    calc ( 100% / 3 )
-    calc ( 100% / 3 )
-    calc ( 100% / 3 );
-    grid-template-rows: 12vh 12vh 12vh 12vh 12vh 12vh 12vh 12vh; /* auto */
+    grid-template-columns: 33.33333333% 33.33333333% 33.33333333%; 
+    grid-template-rows: 50% 10% auto auto auto auto auto;
     grid-template-areas:
     "title title title"
-    "top-nav top-nav top-nav"
     "profile profile profile"
-    "obj pic stub"
+    "obj obj obj"
+    "contacts pic social-media-links"
     "experience experience experience"
     "education education education"
     "skills skills skills"
-    "contacts contacts contacts"    
+    "hobbies hobbies hobbies";
 }
 }
-
-
 
 
 h1 {
@@ -97,28 +103,63 @@ h1 {
     text-align: center;
 }
 h2 {
-    margin-left: auto;
+    margin-left: 64px;
     margin-right: auto;
-    text-align: center;
-
+    text-align: left;
+    margin-top: 1em;
+    margin-right: 32px;
+    margin-bottom: 1em;
+    margin-left: 32px;
 }
+h3 {
+    margin-left: 64px;
+    margin-right: auto;
+    text-align: left;
+    margin-top: 1em;
+    margin-right: 32px;
+    margin-bottom: 1em;
+    margin-left: 210px;
+}
+
+h4 {
+    margin-left: 64px;
+    margin-right: auto;
+    text-align: left;
+    margin-top: 1em;
+    margin-right: 32px;
+    margin-bottom: 1em;
+    margin-left: 210px;
+}
+
+ul {
+    margin-left: 64px;
+    margin-right: auto;
+    text-align: left;
+    margin-top: 1em;
+    margin-right: 32px;
+    margin-bottom: 1em;
+    margin-left: 210px;
+}
+
+
 nav {
-    width: auto;
-    max-width: 600px;
-    background-color: rgb(0,0,0);
+    width: 400px;
+    height: 340px;
+    background-color: rgb(00,0,0);
     color: #ff00ff;
     margin: 16px 16px; /* 16px auto */
+    
 }
 nav ul {
     text-align: center;
     padding: 0;
+    margin-left: 0;
 }
 nav ul li {
     display: block; /* can be inline, block or inlineblock*/
 }
 nav ul li a {
     text-decoration: none; /* will remove underline from this link*/
-    display: inline-block;
     padding: 26px 26px; /* 16 for top and bottom and 32 for left right */
     color: #00ff00
 }
@@ -130,10 +171,12 @@ nav ul li a:active {
     background-color: rgb( 255,0,255);
     color: #00ff00 /* fff implies ffffff */
 }
-nav.topnav{
+.top-nav{
     position: fixed;
     top: 0;
-    width: 100%;
+    right:0px;
+    width: 10%;
+    overflow: hidden;
 
 }
 
@@ -142,25 +185,16 @@ nav.topnav{
     color: #ff00ff /* fff implies ffffff */
 }
 
-#reduce-padding {
+#pic {
     display: block;
+    height: 80%;
+    width: 80%;
     margin: 0px;
     padding: 0px;
-    border-radius: 160px;
+    border-radius: 180px;
     margin-left: auto;
     margin-right: auto;
 
-
-}
-body {
-    /* background-image: https://unsplash.com/photos/-IQGXSMLYJc 
-    https://www.vecteezy.com/vector-art/153501-blue-grunge-background */
-    background-size: tile; /*tile || cover || */
-    background-repeat: repeat;
-    background-position: top center; /* top right */
-    background-attachment: fixed;
-   /* background-image: url('../img/blue-bg.jpg'); */
-    opacity: 1;
 
 }
 /*
@@ -173,7 +207,7 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-image: url('../img/blue-bg.jpg');
+    background-image: url('../img/paul-bg.jpg');
 
 
 }
@@ -193,7 +227,16 @@ p {
     line-height: 1.5;
     color: rgb( 33,33,33 ); /*f There are a few ways to do colour... */
     background-color: none; /* short hand with #eee */
+    display: block;
+    margin-top: 1em;
+    margin-right: 32px;
+    margin-bottom: 1em;
+    margin-left: 210px;
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+}
+
+li {
+    margin-left: 16px;
 }
 
 /* Text meant only for screen readers. */
@@ -278,3 +321,5 @@ p {
     color: rgba( 255, 0, 0, 0.75 ); /* rgba - the "a" stands for alpha channel.   alpha channel: 1 = opaque; 0 = transparent.  can use values in between like 0.5 */
 /* color: rgba( 50, 50, 50, 0.5 ); /* rgba - the "a" stands for alpha channel.   alpha channel: 1 = opaque; 0 = transparent.  can use values in between like 0.5 */
 }
+
+.title-page
