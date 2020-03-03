@@ -3,6 +3,10 @@ body {
     
 }
 
+nav{
+    display: hidden;
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -20,4 +24,41 @@ body {
         "workexp workexp workexp workexp workexp"
         "education education education education education"
     }
+
+    header{
+        grid-area: header;
+    }
+
+    .profile{
+        grid-area: profile;
+    }
+
+    nav{
+        display: block;
+        grid-area: nav;
+    }
+
+    .contact{
+        grid-area: contact;
+    }
+    .objective{
+        grid-area: objective;
+    }
+
+    .pic{
+        grid-area: pic;
+    }
+
+    .hobbies{
+        grid-area: hobbies;
+    }
+
+    .workexperience{
+        grid-area: workexp;
+    }
+    
+    .education{
+        grid-area: education;
+    }
+    
 }
