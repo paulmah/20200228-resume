@@ -1,0 +1,23 @@
+body {
+    display: block;
+    
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* desktop */
+@media screen and ( min-width: 1024px ){
+    body{
+        display: grid;
+        grid-template-columns: 3fr 1fr 4fr 1fr 3fr;
+        grid-template-areas:
+        "header header header header header"
+        ". . profile . nav"
+        ". . contact . nav"
+        "objective . pic . hobbies"
+        "workexp workexp workexp workexp workexp"
+        "education education education education education"
+    }
+}
