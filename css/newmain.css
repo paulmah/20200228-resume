@@ -1,10 +1,49 @@
-body {
+body{
     display: block;
     
 }
 
 nav{
-    display: hidden;
+    visibility: hidden;
+}
+
+header{
+    background-color: antiquewhite;
+}
+
+.profile{
+    background-color: thistle;
+}
+
+nav{
+    display: block;
+    background-color: gold;
+}
+
+.contact{
+    background-color: turquoise;
+}
+.objective{
+    background-color: pink;
+}
+
+.pic{
+    background-color: slategray;
+    background-image: url("../img/paul-profile.jpg");
+    background-size: cover;
+    height: 40vh;
+}
+
+.hobbies{
+    background-color: bisque;
+}
+
+.workexperience{
+    background-color: blanchedalmond;
+}
+
+.education{
+    background-color: burlywood;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -15,14 +54,14 @@ nav{
 @media screen and ( min-width: 1024px ){
     body{
         display: grid;
-        grid-template-columns: 3fr 1fr 4fr 1fr 3fr;
+        grid-template-columns: 3fr 1vw 4fr 1vw 3fr;
         grid-template-areas:
         "header header header header header"
-        ". . profile . nav"
+        "pic. profile . nav"
         ". . contact . nav"
-        "objective . pic . hobbies"
-        "workexp workexp workexp workexp workexp"
-        "education education education education education"
+        "objective objective objective . nav"
+        "workexp workexp workexp . hobbies"
+        "workexp workexp workexp . education"
     }
 
     header{
@@ -34,7 +73,7 @@ nav{
     }
 
     nav{
-        display: block;
+        visibility: visible;
         grid-area: nav;
     }
 
@@ -56,7 +95,7 @@ nav{
     .workexperience{
         grid-area: workexp;
     }
-    
+
     .education{
         grid-area: education;
     }
